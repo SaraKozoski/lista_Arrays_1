@@ -4,10 +4,31 @@
     //Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
 
     //ENTRADA
-
+    const numero1 = Number(prompt(`Insira um número:`));
+    const numero2 = Number(prompt(`Insira um número:`));
+    const numero3 = Number(prompt(`Insira um número:`));
 
     //PROCESSAMENTO
-
+   let numeros = [];
+   if(numero1 < numero2 && numero1 < numero3 && numero2 < numero3){
+    numeros = [numero1,numero2,numero3]
+   }
+   else if(numero1 < numero3 && numero2 < numero3 && numero2 < numero1){
+    numeros = [numero2,numero1,numero3]
+   }
+   else if(numero3 < numero1 && numero3 < numero2 && numero2 < numero1){
+    numeros = [numero3,numero2,numero1]
+   }
+   else if(numero1 < numero2 && numero1 < numero3 && numero3 < numero2){
+    numeros = [numero1,numero3,numero2]
+   }
+   else if(numero3 < numero1 && numero2 < numero3 && numero2 < numero1){
+    numeros = [numero2,numero3,numero1]
+   }
+   else{
+    numeros = [numero3,numero1,numero2]
+   }
+   document.write(numeros.join(" - "));
 
     //SAÍDA
 
