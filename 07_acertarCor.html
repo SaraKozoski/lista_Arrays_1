@@ -11,10 +11,17 @@
 
     //ENTRADA
     const nomeCores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
-    const cor = prompt(`Informe uma cor:`);
-    let aleatorio = Match.floor(Match.random()*7);
+    const cor = prompt(`Informe uma cor: ${nomeCores.join(", ")}`);
+    let aleatorio = Math.floor(Math.random()*7);
+
+    const posicaoCor = nomeCores.indexOf(cor);
     //PROCESSAMENTO
-    if()
+    if(posicaoCor == aleatorio) {
+        alert(`PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${cor}`)
+    }
+    else {
+        alert(`NÃO FOI DESSA VEZ... TENTE NOVAMENTE!`)
+    }
 
     //SAÍDA
 

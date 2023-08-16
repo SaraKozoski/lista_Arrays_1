@@ -6,11 +6,13 @@
     //Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
 
     //ENTRADA
-    
+    const palavra = prompt(`Insira UMA palavra:`)
+    const letra = prompt(`Insira uma letra que deseja encontrar na palavra que acabou de digitar:`)
 
+    const letracerta = palavra.indexOf(letra);
     //PROCESSAMENTO
 
-
+   
     //SAÍDA
-
+    alert(`a posição da letra é ${letracerta}`)
 </script>
